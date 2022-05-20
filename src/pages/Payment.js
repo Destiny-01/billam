@@ -26,8 +26,8 @@ export default class Payment extends Component {
             <Col md="2"></Col>
             <Col md="8" className="text-center">
               <img src={Logo} alt="Billam Logo" className="mb-4" />
-              <h2 className="mb-0">Help Joan get these shoes</h2>
-              <p className="caption text-primary">by @jack</p>
+              <h2 className="mb-0">Hi need this book please</h2>
+              <p className="caption text-primary">by @aigbe_1</p>
               <Card className="fluid">
                 <Row noGutters>
                   <Col md="5">

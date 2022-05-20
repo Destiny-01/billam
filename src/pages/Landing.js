@@ -12,8 +12,8 @@ export default function Landing() {
         <Row>
           <Col className="align-self-center" md="5">
             <h1 className="mb-2 title-text">
-              Where fundraising <br />
-              becomes fun and social
+              Get the support <br />
+              you need to buy anything
             </h1>
             <h6 className="mb-4 body-text">
               Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget
