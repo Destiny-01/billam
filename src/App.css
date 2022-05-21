@@ -60,3 +60,8 @@ h6,
 .progress {
   height: 4px;
 }
+
+.twitter-tweet {
+  max-height: 450px;
+  background-color: aliceblue;
+}

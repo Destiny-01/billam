@@ -14,7 +14,7 @@ import {
   Row,
 } from "reactstrap";
 import NavbarWrapper from "../components/NavbarWrapper";
-import axios from "axios";
+import axios from "../utils/axios";
 
 export default class Login extends Component {
   state = {
@@ -31,10 +31,16 @@ export default class Login extends Component {
     e.preventDefault();
     console.log(JSON.stringify(this.state));
     axios
-      .post("http://localhost:8000/api/v1/auth", JSON.stringify(this.state))
+      .post("/auth", {
+        username: this.state.username,
+        email: this.state.email,
+        password: this.state.password,
+      })
       .then((res) => {
-        console.log(res);
-      });
+        localStorage.setItem("google", res.data.user._id);
+        window.location.href = "localhost:3000/dashboard";
+      })
+      .catch((err) => console.log(err));
   };
 
   render() {
