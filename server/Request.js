@@ -6,12 +6,25 @@ const requestSchema = new mongoose.Schema({
     required: true,
   },
   image: {
+    type: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+  },
+  uid: {
     type: String,
     required: true,
   },
   totalAmount: {
     type: String,
     required: true,
+  },
+  amountRaised: {
+    type: Number,
   },
   title: {
     type: String,
@@ -20,6 +33,9 @@ const requestSchema = new mongoose.Schema({
   donators: [
     {
       name: {
+        type: String,
+      },
+      ref: {
         type: String,
       },
       email: {

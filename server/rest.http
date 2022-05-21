@@ -2,9 +2,35 @@ POST http://localhost:8000/api/v1/auth HTTP/1.1
 content-type: application/json
 
 {
-    "username": "john",
+    "username": "johhn",
     "email": "john@doe.com",
     "password": "123456"
 }
 ###
+POST http://localhost:8000/api/v1/products/new HTTP/1.1
+content-type: application/json
+
+{
+    "username": "john",
+    "twitterLink": "https://twitter.com/AdoraNwodo/status/1443961582577455106",
+    "totalAmount": "5000",
+    "title": "My shoes",
+    "code": "iamadmin"
+}
+###
+POST http://localhost:8000/api/v1/pay HTTP/1.1
+content-type: application/json
+
+{
+    "name": "john",
+    "email": "t@t.com",
+    "phone": "5000",
+    "amount": 5000,
+    "uid": "0f7f541a-43be-446e-8946-3251557e32ef"
+}
+###
 GET http://localhost:8000/api/v1/products HTTP/1.1
+###
+GET http://localhost:8000/api/v1/pay/done?ref=f028f2dcdd15 HTTP/1.1
+###
+GET http://localhost:8000/api/v1/products/0f7f541a-43be-446e-8946-3211557e32ef  HTTP/1.1
