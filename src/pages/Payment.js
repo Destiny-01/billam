@@ -78,7 +78,13 @@ export default function Payment() {
           <Col md="8" className="text-center">
             <img src={Logo} alt="Billam Logo" className="mb-4" />
             <h2 className="mb-0">{product.title}</h2>
-            <p className="caption text-primary">by @{product.username}</p>
+            <p className="caption text-primary mb-3">by @{product.username}</p>
+            <p className="mb-1">
+              <span className="h6">N{product.amountRaised} </span>
+              <span className="caption">
+                raised out of N{product.totalAmount}
+              </span>
+            </p>
             <Card className="fluid">
               <Row noGutters>
                 <Col md="5" className="ps-3 pt-3">
