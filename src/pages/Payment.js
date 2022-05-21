@@ -84,7 +84,7 @@ export default function Payment() {
                 <Col md="5" className="ps-3">
                   <div class="twitter-tweet">
                     <p>jjjj</p>
-                    <a href={product.image}></a>
+                    <img src={product.image} alt="d" width="100%" />
                   </div>
                 </Col>
                 <Col md="7">

@@ -44,7 +44,6 @@ export default class Login extends Component {
   };
 
   render() {
-    // http://localhost:8000/api/v1/auth
     return (
       <div>
         <NavbarWrapper />

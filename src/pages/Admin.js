@@ -37,7 +37,7 @@ export default class Admin extends Component {
       .post("/products/new", {
         username: this.state.username,
         code: this.state.code,
-        twitterLink: this.state.link,
+        twitterLink: "https://ipfs.io/ipfs/" + this.state.link,
         title: this.state.title,
         totalAmount: this.state.amount,
       })
