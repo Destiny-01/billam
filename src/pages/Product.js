@@ -18,20 +18,15 @@ import {
 } from "reactstrap";
 import NavbarWrapper from "../components/NavbarWrapper";
 import Placeholder1 from "../assets/Placeholder1.png";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import axios from "../utils/axios";
+
 // import Avatar from "../assets/Avatar.png";
 
 export default function Product() {
-  const [product, setProduct] = useState({});
   // const history=useHis
-  let { id } = useParams();
-
-  useEffect(() => {
-    axios.get(`/products/${id}`).then((res) => {
-      setProduct(res.data.product);
-    });
-  }, [id]);
+  const location = useLocation();
+  const product = location.state?.product;
 
   return (
     <div>
@@ -59,14 +54,14 @@ export default function Product() {
                     className="mb-2"
                   />
                   <p className="caption body-text">
-                    {product.donations.length} donations
+                    {product.donators.length} donators
                   </p>
                 </div>
                 <Button block color="primary" className="btn-small mb-3">
                   Share
                 </Button>
                 <div className="">
-                  {product.donations.map((donor) => {
+                  {product.donators.map((donor) => {
                     return (
                       <div className="mb-1 d-flex">
                         <img
