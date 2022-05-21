@@ -19,7 +19,7 @@ import {
 import NavbarWrapper from "../components/NavbarWrapper";
 import Placeholder1 from "../assets/Placeholder1.png";
 import { useParams } from "react-router-dom";
-import axios from "axios";
+import axios from "../utils/axios";
 // import Avatar from "../assets/Avatar.png";
 
 export default function Product() {

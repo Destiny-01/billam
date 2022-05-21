@@ -18,7 +18,7 @@ import {
 } from "reactstrap";
 import NavbarWrapper from "../components/NavbarWrapper";
 import Placeholder1 from "../assets/Placeholder1.png";
-import axios from "axios";
+import axios from "../utils/axios";
 
 export default class Dashboard extends Component {
   state = {
@@ -27,7 +27,7 @@ export default class Dashboard extends Component {
   componentDidMount() {
     const id = localStorage.getItem("google");
     axios.get(`/products?id=${id}`).then((res) => {
-      console.log("rr", res.data);
+      console.log("rr", res);
       this.setState({ products: res.data.user.requests });
       //  setProduct(res.data.product);
     });

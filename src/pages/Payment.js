@@ -81,9 +81,8 @@ export default function Payment() {
             <p className="caption text-primary">by @{product.username}</p>
             <Card className="fluid">
               <Row noGutters>
-                <Col md="5" className="ps-3">
+                <Col md="5" className="ps-3 pt-3">
                   <div class="twitter-tweet">
-                    <p>jjjj</p>
                     <img src={product.image} alt="d" width="100%" />
                   </div>
                 </Col>
