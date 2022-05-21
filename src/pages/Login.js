@@ -38,7 +38,7 @@ export default class Login extends Component {
       })
       .then((res) => {
         localStorage.setItem("google", res.data.user._id);
-        window.location.href = "localhost:3000/dashboard";
+        window.location.href = "https://billam.netlify.app/dashboard";
       })
       .catch((err) => console.log(err));
   };
